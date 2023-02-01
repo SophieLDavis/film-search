@@ -1,3 +1,4 @@
+/* setting colour variable  */
 :root {
     --primary-color:#B5B1B2;
     --secondary-color: #ADA9B7;
@@ -10,16 +11,23 @@
     color: var(--font-color);
   }
 
-
-
+/*  setting text colour (needs refactoring) */
 .display-4 {
 font-family: 'Bungee', cursive;
 }
-
 .lead {
 font-family: 'Bungee', cursive;
 }
-    
 #navtext {
 font-family: 'Bungee', cursive;
+color: var(--font-color);
 }
+
+/* Adding background image to jumbotron */
+.jumbotron {
+    background: url('https://images.unsplash.com/photo-1614849286447-fb815456e5a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+ }
