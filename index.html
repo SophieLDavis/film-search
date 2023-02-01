@@ -15,6 +15,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    
+    <title>Film Soundtrack Search</title>
+    <!-- As a link -->
+    <!-- As a heading -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Bungee"
@@ -28,19 +32,37 @@
     <!---jumbotron-->
     <div class="jumbotron jumbotron-fluid"></div>>
       <div class="container">
+        <div class="text-center">
         <h1 class="display-4">Soundtrack search</h1>
         <p class="lead">Search top 100 movies</p>
+        </div>
       </div>
     </div>
     <!---search button-->
     <form class="search-input" action="action_page.php">
       <input type="text" placeholder="Search.." name="search-input" />
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <button type="submit"><i class="fa fa-search">search</i></button>
     </form>
     <!---embed video container-->
     <div class="container">
-      <video width="500" height="400" controls></video>
+      <div class="row">
+        <div class="col">
+      <div style="text-align: center">
+      <video width="500" height="400" controls></video> 
+         </div>
+        </div>  
+        <div class="col" id="poster"> <!---poster-->
+          
+        </div>
+      </div>
     </div>
+
+    
+      
+      
+
+
+     
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script

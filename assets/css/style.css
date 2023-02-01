@@ -20,7 +20,6 @@ font-family: 'Bungee', cursive;
 }
 #navtext {
 font-family: 'Bungee', cursive;
-color: var(--font-color);
 }
 
 /* Adding background image to jumbotron */
@@ -31,3 +30,7 @@ color: var(--font-color);
     background-size: cover;
     -o-background-size: cover;
  }
+
+.poster {
+  border: 5px;
+}
