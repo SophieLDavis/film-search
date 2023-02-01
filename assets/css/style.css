@@ -1,0 +1,25 @@
+:root {
+    --primary-color:#B5B1B2;
+    --secondary-color: #ADA9B7;
+    --font-color: #A1CDF4;
+    --bg-color: #A9AFD1;
+    --heading-color:#A1CDF4;
+  }
+  body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+  }
+
+
+
+.display-4 {
+font-family: 'Bungee', cursive;
+}
+
+.lead {
+font-family: 'Bungee', cursive;
+}
+    
+#navtext {
+font-family: 'Bungee', cursive;
+}
