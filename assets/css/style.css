@@ -12,20 +12,14 @@
 
 
 
-/*
-for google fonts:
+.display-4 {
 font-family: 'Bungee', cursive;
-font-family: 'Bungee Shade', cursive;
-font-family: 'Noto Sans Mono', monospace;
+}
 
-/* 
-
-url 
-https://fonts.googleapis.com/css2
-
-To request multiple families, specify the family= param for each family.
-
-For example, to request the fonts Crimson Pro and Literata:
-
-
-https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata */
+.lead {
+font-family: 'Bungee', cursive;
+}
+    
+#navtext {
+font-family: 'Bungee', cursive;
+}
