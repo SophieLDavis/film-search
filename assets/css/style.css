@@ -23,3 +23,7 @@ font-family: 'Bungee', cursive;
 #navtext {
 font-family: 'Bungee', cursive;
 }
+
+.poster {
+  border: 5px;
+}
