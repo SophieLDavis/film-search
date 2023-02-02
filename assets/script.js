@@ -26,69 +26,92 @@ $("#submit-btn").on("click", function (e) {
   movieSearches.push(userInput);
   console.log(movieSearches);
   localStorage.setItem("movieSearches", JSON.stringify(movieSearches));
+  previousSearches();
 });
 
 function movieSearch(userInput) {
   var movieTitle = userInput;
-
-  // var apiKey = "bd88b13b";
   var queryURL = "http://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieTitle;
 
-    $.ajax({
-        url: queryURL,
-        method: "GET",
-    }).then(function (result) {
-        console.log(result);
-        //title, director,poster,imdbRating,Runtime,Plot,Genre
-        var title = result.Title;
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  }).then(function (result) {
+    console.log(result);
+    //title, director,poster,imdbRating,Runtime,Plot,Genre
+    var title = result.Title;
 
-        var director = result.Director;
-        var imgUrl = result.Poster;
-        console.log(imgUrl)
-        var poster = $("<img class='movie-poster'>").attr('src', imgUrl);
-        console.log(poster);
+    var director = result.Director;
+    var imgUrl = result.Poster;
+    console.log(imgUrl);
+    var poster = $("<img class='movie-poster'>").attr("src", imgUrl);
+    console.log(poster);
 
     var imdbRating = $("<p class='movie-imdbrating'>").text(
       "Movie imdb Rating: " + result.imdbRating
     );
 
-        var imdbRating = result.imdbRating;
+    var imdbRating = result.imdbRating;
 
-        var runTime = result.Runtime;
+    var runTime = result.Runtime;
 
-        var plot = result.Plot;
+    var plot = result.Plot;
 
-        var genre = result.Genre;
+    var genre = result.Genre;
 
-        
+    //   var movieData = $("<div>");
 
+    $("#movie-title").text(title);
+    $("#genre-runtime").text(genre, runTime);
+    $("#movie-imdbrating").text(imdbRating);
+    $("#movie-plot").text(plot);
+    $("#movie-director").text(director);
+    $("#movie-data").append(poster);
 
-        //   var movieData = $("<div>");
-
-        $('#movie-title').text(title);
-        $('#genre-runtime').text(genre, runTime)
-        $('#movie-imdbrating').text(imdbRating)
-        $('#movie-plot').text(plot)
-        $('#movie-director').text(director)
-        $('#movie-data').append(poster)
-
-      
-        //   movieData.append(poster);
-
-
-    });
+    //   movieData.append(poster);
+  });
+}
 
 // Return previous searches
-previousSearches();
 
 function previousSearches() {
-  var movieSearches = JSON.parse(
-    localStorage.getItem("movieSearches", userInput)
-  );
+  var movieSearches = JSON.parse(localStorage.getItem("movieSearches"));
   console.log(movieSearches);
+  $("#prev-search-blocks").empty();
   for (var i = 0; i < movieSearches.length; i++) {
-    var previousSearchBlock = $(`<div></div>`);
-    var previousSearchTitle = $(`<h3>${movieSearces[i]}</h3>`);
-    var previousSearchButton = $(`<button>Search</button`);
+    var queryURL =
+      "http://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieSearches[i];
+    $.ajax({
+      url: queryURL,
+      method: "GET",
+    }).then(function (result) {
+      console.log(result);
+      //title, director,poster,imdbRating,Runtime,Plot,Genre
+      var previousSearchBlock = $(`<div></div>`);
+      previousSearchBlock.css(
+        "background-image",
+        "linear-gradient(to top, rgb(17 24 61 / 73%), rgb(66 19 97 / 80%)), url(" +
+          result.Poster +
+          ")"
+      );
+      previousSearchBlock.css("max-width", "30%");
+      previousSearchBlock.css("padding", "2rem");
+      previousSearchBlock.css("margin", "1rem");
+      //   previousSearchBlock.css("background-repeat", "no-repeat");
+      //   previousSearchBlock.css("background-size", "cover");
+
+      var previousSearchTitle = $(`<h3>${result.Title}</h3>`);
+      var previousSearchButton = $(
+        `<button class="search-btn btn btn-primary" type="button" data-name="${result.Title}">Search</button>`
+      );
+      previousSearchBlock.append(previousSearchTitle, previousSearchButton);
+      $("#prev-search-blocks").append(previousSearchBlock);
+      // Use previous search buttons as input
+      $(".search-btn").on("click", function (event) {
+        event.preventDefault();
+        movieSearch($(this).attr("data-name"));
+        console.log($(this).attr("data-name"));
+      });
+    });
   }
 }
