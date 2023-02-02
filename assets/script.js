@@ -21,6 +21,7 @@
 let movieSearches = [];
 $("#submit-btn").on("click", function (e) {
   e.preventDefault();
+
   var userInput = $("#user-input").val().trim();
   movieSearch(userInput);
   movieSearches.push(userInput);
@@ -29,6 +30,7 @@ $("#submit-btn").on("click", function (e) {
 });
 
 function movieSearch(userInput) {
+    $('.appendel').empty()
   var movieTitle = userInput;
 
   // var apiKey = "bd88b13b";
@@ -70,13 +72,14 @@ function movieSearch(userInput) {
         $('#movie-imdbrating').text(imdbRating)
         $('#movie-plot').text(plot)
         $('#movie-director').text(director)
-        $('#movie-data').append(poster)
+        $('#poster-img').append(poster)
 
       
         //   movieData.append(poster);
 
 
     });
+}
 
 // Return previous searches
 previousSearches();

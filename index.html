@@ -44,8 +44,8 @@
       <button id="submit-btn"><i class="fa fa-search">search</i></button>
     </form>
     <!---card for video and text -->
-    <div class="row">
-      <div class="col-sm-6">
+    <div class="row"> 
+      <div class="col-sm-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Video</h5>
@@ -57,23 +57,43 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
-        <div class="card" id="movie-data">
-          <div class="card-body">
-            <h2 id="movie-title"></h2>
-            <h5 class="card-title">Movie-data</h5>
-            <hr />
-            <div class="flex flex-row" id="genre-runtime">
-              <p class="card-text" id="movie-genre"></p>
-              <span class="card-text" id="movie-runtime"></span>
+      <div class="card mb-3 col-sm-8">
+        <div class="row no-gutters">
+          <div class="col-md-4 appendel" id="poster-img"></div>
+          <div class="col-md-8">
+                <h2 class="appendel" id="movie-title"></h2>
+                <h5 class="card-title appendel">Movie-data</h5>
+                <hr />
+                <div class="flex flex-row" id="genre-runtime">
+                  <p class="card-text appendel" id="movie-genre"></p>
+                  <span class="card-text appendel" id="movie-runtime"></span>
+                </div>
+                <p class="card-text appendel" id="movie-imdbrating"></p>
+                <p class="card-text appendel" id="movie-plot"></p>
+                <p class="card-text appendel" id="movie-director"></p>
+  <!--           <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
-            <!-- <img src="" alt=""> -->
           </div>
         </div>
-        <p class="card-text" id="movie-imdbrating"></p>
-        <p class="card-text" id="movie-plot"></p>
-        <p class="card-text" id="movie-director"></p>
       </div>
+      <div class="col-sm-8 flex flex-col">
+        <div class="card" id="movie-data">
+          <div class="card-body">
+            <h2 class="appendel" id="movie-title"></h2>
+            <h5 class="card-title appendel">Movie-data</h5>
+            <hr />
+            <div class="flex flex-row" id="genre-runtime">
+              <p class="card-text appendel" id="movie-genre"></p>
+              <span class="card-text appendel" id="movie-runtime"></span>
+            </div>
+            <p class="card-text appendel" id="movie-imdbrating"></p>
+            <p class="card-text appendel" id="movie-plot"></p>
+            <p class="card-text appendel" id="movie-director"></p> -->
+          </div>
+        </div>
     </div>
     <!---embed video container-->
     <!-- <div class="container">
