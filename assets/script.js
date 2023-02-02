@@ -43,29 +43,36 @@ function movieSearch(userInput) {
     }).then(function (result) {
         console.log(result);
         //title, director,poster,imdbRating,Runtime,Plot,Genre
-        var title = $("<h1 class='movie-title'>").text("Movie Title: " + result.Title);
+        var title = result.Title;
 
-        var director = $("<p class='movie-director'>").text("Director: " + result.Director);
+        var director = result.Director;
         var imgUrl = result.Poster;
         console.log(imgUrl)
         var poster = $("<img class='movie-poster'>").attr('src', imgUrl);
         console.log(poster);
 
 
-        var imdbRating = $("<p class='movie-imdbrating'>").text("Movie imdb Rating: " + result.imdbRating);
+        var imdbRating = result.imdbRating;
 
-        var runTime = $("<p class='movie-runtime'>").text("Runtime: " + result.Runtime);
+        var runTime = result.Runtime;
 
-        var plot = $("<p class='movie-plot'>").text("Plot: " + result.Plot);
+        var plot = result.Plot;
 
-        var genre = $("<p class='movie-genre'>").text("Genre: " + result.Genre);
+        var genre = result.Genre;
 
         
 
 
         //   var movieData = $("<div>");
 
-        $('#movie-data').append(title,poster,imdbRating,runTime,plot);
+        $('#movie-title').text(title);
+        $('#genre-runtime').text(genre, runTime)
+        $('#movie-imdbrating').text(imdbRating)
+        $('#movie-plot').text(plot)
+        $('#movie-director').text(director)
+        $('#movie-data').append(poster)
+
+      
         //   movieData.append(poster);
 
 
