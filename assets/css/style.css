@@ -34,3 +34,7 @@ font-family: 'Bungee', cursive;
 .poster {
   border: 5px;
 }
+
+.search-input {
+    text-align: center;
+}
