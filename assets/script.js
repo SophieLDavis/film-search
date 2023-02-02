@@ -34,42 +34,49 @@ function movieSearch(userInput) {
   // var apiKey = "bd88b13b";
   var queryURL = "http://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieTitle;
 
-  $.ajax({
-    url: queryURL,
-    method: "GET",
-  }).then(function (result) {
-    console.log(result);
-    //title, director,poster,imdbRating,Runtime,Plot,Genre
-    var title = $("<h1 class='movie-title'>").text(
-      "Movie Title: " + result.Title
-    );
+    $.ajax({
+        url: queryURL,
+        method: "GET",
+    }).then(function (result) {
+        console.log(result);
+        //title, director,poster,imdbRating,Runtime,Plot,Genre
+        var title = result.Title;
 
-    var director = $("<p class='movie-director'>").text(
-      "Director: " + result.Director
-    );
-    var imgUrl = result.Poster;
-    console.log(imgUrl);
-    var poster = $("<img class='movie-poster'>").attr("src", imgUrl);
-    console.log(poster);
+        var director = result.Director;
+        var imgUrl = result.Poster;
+        console.log(imgUrl)
+        var poster = $("<img class='movie-poster'>").attr('src', imgUrl);
+        console.log(poster);
 
     var imdbRating = $("<p class='movie-imdbrating'>").text(
       "Movie imdb Rating: " + result.imdbRating
     );
 
-    var runTime = $("<p class='movie-runtime'>").text(
-      "Runtime: " + result.Runtime
-    );
+        var imdbRating = result.imdbRating;
 
-    var plot = $("<p class='movie-plot'>").text("Plot: " + result.Plot);
+        var runTime = result.Runtime;
 
-    var genre = $("<p class='movie-genre'>").text("Genre: " + result.Genre);
+        var plot = result.Plot;
 
-    //   var movieData = $("<div>");
+        var genre = result.Genre;
 
-    //   movieData.append(title, director,poster,imdbRating,runTime,plot,genre)
-    //   movieData.append(poster);
-  });
-}
+        
+
+
+        //   var movieData = $("<div>");
+
+        $('#movie-title').text(title);
+        $('#genre-runtime').text(genre, runTime)
+        $('#movie-imdbrating').text(imdbRating)
+        $('#movie-plot').text(plot)
+        $('#movie-director').text(director)
+        $('#movie-data').append(poster)
+
+      
+        //   movieData.append(poster);
+
+
+    });
 
 // Return previous searches
 previousSearches();
