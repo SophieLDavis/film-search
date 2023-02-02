@@ -19,61 +19,69 @@
 
 // Using OMDB api to fetch movie data
 let movieSearches = [];
-$('#submit-btn').on('click', function (e) {
-    e.preventDefault();
-    var userInput = $('#user-input').val().trim();
-    movieSearch(userInput);
-    movieSearches.push(userInput);
-    console.log(movieSearches)
-    localStorage.setItem('movieSearches', JSON.stringify(movieSearches));
-
-
-})
+$("#submit-btn").on("click", function (e) {
+  e.preventDefault();
+  var userInput = $("#user-input").val().trim();
+  movieSearch(userInput);
+  movieSearches.push(userInput);
+  console.log(movieSearches);
+  localStorage.setItem("movieSearches", JSON.stringify(movieSearches));
+});
 
 function movieSearch(userInput) {
-    
-    var movieTitle = userInput;
+  var movieTitle = userInput;
 
-    // var apiKey = "bd88b13b";
-    var queryURL = "http://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieTitle;
+  // var apiKey = "bd88b13b";
+  var queryURL = "http://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieTitle;
 
-    $.ajax({
-        url: queryURL,
-        method: "GET",
-    }).then(function (result) {
-        console.log(result);
-        //title, director,poster,imdbRating,Runtime,Plot,Genre
-        var title = $("<h1 class='movie-title'>").text("Movie Title: " + result.Title);
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  }).then(function (result) {
+    console.log(result);
+    //title, director,poster,imdbRating,Runtime,Plot,Genre
+    var title = $("<h1 class='movie-title'>").text(
+      "Movie Title: " + result.Title
+    );
 
-        var director = $("<p class='movie-director'>").text("Director: " + result.Director);
-        var imgUrl = result.Poster;
-        console.log(imgUrl)
-        var poster = $("<img class='movie-poster'>").attr('src', imgUrl);
-        console.log(poster);
+    var director = $("<p class='movie-director'>").text(
+      "Director: " + result.Director
+    );
+    var imgUrl = result.Poster;
+    console.log(imgUrl);
+    var poster = $("<img class='movie-poster'>").attr("src", imgUrl);
+    console.log(poster);
 
+    var imdbRating = $("<p class='movie-imdbrating'>").text(
+      "Movie imdb Rating: " + result.imdbRating
+    );
 
-        var imdbRating = $("<p class='movie-imdbrating'>").text("Movie imdb Rating: " + result.imdbRating);
+    var runTime = $("<p class='movie-runtime'>").text(
+      "Runtime: " + result.Runtime
+    );
 
-        var runTime = $("<p class='movie-runtime'>").text("Runtime: " + result.Runtime);
+    var plot = $("<p class='movie-plot'>").text("Plot: " + result.Plot);
 
-        var plot = $("<p class='movie-plot'>").text("Plot: " + result.Plot);
+    var genre = $("<p class='movie-genre'>").text("Genre: " + result.Genre);
 
-        var genre = $("<p class='movie-genre'>").text("Genre: " + result.Genre);
+    //   var movieData = $("<div>");
 
-        
-
-
-        //   var movieData = $("<div>");
-
-        //   movieData.append(title, director,poster,imdbRating,runTime,plot,genre)
-        //   movieData.append(poster);
-
-
-    });
-
-    
-
-
-
+    //   movieData.append(title, director,poster,imdbRating,runTime,plot,genre)
+    //   movieData.append(poster);
+  });
 }
 
+// Return previous searches
+previousSearches();
+
+function previousSearches() {
+  var movieSearches = JSON.parse(
+    localStorage.getItem("movieSearches", userInput)
+  );
+  console.log(movieSearches);
+  for (var i = 0; i < movieSearches.length; i++) {
+    var previousSearchBlock = $(`<div></div>`);
+    var previousSearchTitle = $(`<h3>${movieSearces[i]}</h3>`);
+    var previousSearchButton = $(`<button>Search</button`);
+  }
+}
