@@ -65,7 +65,7 @@ function movieSearch(userInput) {
 
         //   var movieData = $("<div>");
 
-        $('#movie-data').append(title,imgUrl,poster,imdbRating,runTime,plot);
+        $('#movie-data').append(title,poster,imdbRating,runTime,plot);
         //   movieData.append(poster);
 
 
