@@ -37,9 +37,9 @@
       </div>
     </div>
     <!---search button-->
-    <form class="search-input" action="action_page.php">
-      <input type="text" placeholder="Search.." name="search-input" />
-      <button type="submit"><i class="fa fa-search">search</i></button>
+    <form class="search-input">
+      <input type="text" placeholder="Search.." id="user-input" />
+      <button id="submit-btn"><i class="fa fa-search">search</i></button>
     </form>
     <!---card for video and text -->
     <div class="row">
@@ -53,7 +53,7 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <div class="card">
+        <div class="card" id="movie-data">
           <div class="card-body">
             <h5 class="card-title">Movie-data</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -70,7 +70,7 @@
             <video width="500" height="400" controls></video>
           </div>
         </div>
-        <div class="col" id="poster"><!---poster--></div>
+        <div class="col" id="poster"></div>
       </div>
     </div> -->
 
