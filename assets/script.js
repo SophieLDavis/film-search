@@ -62,17 +62,16 @@ function movieSearch(userInput) {
       "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyDwgSkDF2C9Urcz4cS9A7r1XYsV5_khoh4&q=" +
       youtubeSearchQuery2 +
       "+trailer";
+    youtubeQueryURL;
     $.ajax({
       url: youtubeQueryURL,
       method: "GET",
     }).then(function (result) {
-      var fullTrailerURL = `www.youtube.com/embed/'${result.items[0].id.videoId}`;
-      console.log(fullTrailerURL);
-      $("#video-embed").attr(("src", fullTrailerURL));
-      //www.youtube.com/embed/${result.items[0].id.videoId}
-      //   https: $("#video-embed").append(
-      //     `<iframe width="560" height="315" src="https://www.youtube.com/embed/${result.items[0].id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
-      //   );
+      result;
+      result.items[0].id.videoId;
+      $("#video-embed").append(
+        `<iframe width="560" height="315" src="https://www.youtube.com/embed/${result.items[0].id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+      );
     });
   });
 }
