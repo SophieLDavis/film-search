@@ -46,7 +46,7 @@ function movieSearch(userInput) {
     var director = result.Director;
     var imgUrl = result.Poster;
     console.log(imgUrl);
-    var poster = $("<img class='movie-poster'>").attr("src", imgUrl);
+    var poster = $("<img class='movie-poster'>").attr("src", imgUrl).css("height","200px" );
     console.log(poster);
 
     var imdbRating = $("<p class='movie-imdbrating'>").text(
