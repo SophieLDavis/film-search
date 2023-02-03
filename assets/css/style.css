@@ -38,7 +38,21 @@ font-family: 'Bungee', cursive;
 .search-input {
     text-align: center;
 }
-/* 
-#poster-img {
 
-} */
+.movie-body {
+
+  background-color: black;
+  
+}
+#poster-img {
+  height: 10px;
+  width: 40px;
+  
+}
+
+.movie-textdata {
+  margin: 40px;
+  /* padding-right: 15px !important; */
+}
+
+
