@@ -29,13 +29,12 @@ function movieSearch(userInput) {
     var imgUrl = result.Poster;
 
     console.log(imgUrl);
-    var poster = $("<img class='movie-poster'>").attr("src", imgUrl).css("height","200px" );
-    console.log(poster);
+    // var poster = $("<img class='movie-poster'>").attr("src", imgUrl).css("height","200px" );
+    // console.log(poster);
 
     // (imgUrl);
     // var poster = $("<img class='movie-poster'>").attr("src", imgUrl);
     // (poster);
-
 
     var imdbRating = $("<p class='movie-imdbrating'>").text(
       "Movie imdb Rating: " + result.imdbRating
@@ -57,27 +56,24 @@ function movieSearch(userInput) {
     $("#movie-plot").text(plot);
     $("#movie-director").text(director);
     // $("#poster-img").append(poster);
-    $("#poster-img").attr("src", imgUrl);
+    $("#poster-img").attr("src", result.Poster);
 
     var youtubeQueryURL,
       youtubeSearchQuery = title;
     // Format search query so that spaces are changed to +
     var youtubeSearchQuery2 = youtubeSearchQuery.replace(/ /g, "+");
-
-    youtubeQueryURL =
-      "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyDwgSkDF2C9Urcz4cS9A7r1XYsV5_khoh4&q=" +
-      youtubeSearchQuery2 +
-      "+trailer";
-    youtubeQueryURL;
+    var sophieApiKey = "AIzaSyBs6xu_mSbjlI-Afa9do9-6RHln-FL-2vI";
+    youtubeQueryURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=${sophieApiKey}&q=${youtubeSearchQuery2}+trailer`;
+    // youtubeQueryURL;
     $.ajax({
       url: youtubeQueryURL,
       method: "GET",
     }).then(function (result) {
-      result;
-      result.items[0].id.videoId;
-      $("#video-embed").append(
-        `<iframe width="560" height="315" src="https://www.youtube.com/embed/${result.items[0].id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
-      );
+      //   result;
+      //   result.items[0].id.videoId;
+      var fullTrailerURL = `https://www.youtube.com/embed/${result.items[0].id.videoId}`;
+      console.log(fullTrailerURL);
+      $("#video-embed").attr("src", fullTrailerURL);
     });
   });
 }
