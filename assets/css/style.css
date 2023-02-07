@@ -74,3 +74,84 @@ font-family: 'Bungee', cursive;
   border-radius: 10px;
   align-items: center;
 }
+/* Adding style to Footer section */
+footer {
+  position: relative;
+  bottom: 0;
+}
+
+.footer-distributed {
+  width: 100%;
+  background: linear-gradient(to right,#00093c, #2d0b00);
+  color: #fff;
+
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+  text-align: left;
+
+
+}
+.footer-distributed .col-left {
+  width: 30%;
+  text-align: left;
+}
+
+.footer-distributed .col-center {
+  width: 35%;
+  text-align: center;
+}
+.footer-distributed .col-right {
+  width: 30%;
+}
+
+form {
+  padding-bottom: 15px;
+
+  align-items: center;
+
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+form .far{
+  font-size: 18px;
+  margin-right: 10px;
+}
+footer .social-icons {
+  display: flex;
+}
+footer .social-icons li a{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+  display: inline-block;
+ 
+  flex-wrap: wrap; 
+  transition: 0.5s;
+ 
+
+} 
+footer .social-icons li {
+  list-style: none;
+ 
+}
+/* Hover effect on social icons */
+footer .social-icons a:hover{
+  transform: translateY(-10px);
+
+
+}
+
+.copyright {
+  text-align: left;
+}
