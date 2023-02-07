@@ -55,4 +55,22 @@ font-family: 'Bungee', cursive;
   /* padding-right: 15px !important; */
 }
 
+/* submit button */
+#submit-btn {
+  margin-bottom: 5px;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  align-items: center;
+}
 
+/* search bar */
+#user-input {
+  background-color:#A1CDF4B7;
+  width: 500px;
+  height: 40px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  align-items: center;
+}
