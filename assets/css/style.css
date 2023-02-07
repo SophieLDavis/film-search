@@ -1,14 +1,15 @@
 /* setting colour variable  */
 :root {
-  --primary-color: #b5b1b2;
-  --secondary-color: #ada9b7;
-  --font-color: #a1cdf4;
-  --bg-color: #a9afd1;
-  --heading-color: #a1cdf4;
+  --primary: #eec1de;
+  --secondary: #f4ea92;
+  --thirdary: #b5cbbf;
+  --black: #0a0908;
+  --white: #f2f4f3;
 }
+
 body {
-  background-color: var(--bg-color);
-  color: var(--font-color);
+  background-color: var(--secondary);
+  color: var(--black);
 }
 
 h1,
@@ -16,15 +17,13 @@ h2,
 h3 {
   font-family: "Bungee", cursive;
 }
-/*  setting text colour (needs refactoring) */
-.display-4 {
-  font-family: "Bungee", cursive;
+
+* {
+  font-family: Helvetica, sans-serif;
 }
-.lead {
-  font-family: "Bungee", cursive;
-}
-#navtext {
-  font-family: "Bungee", cursive;
+
+a {
+  color: var(--black);
 }
 
 /* Adding background image to jumbotron */
@@ -46,7 +45,7 @@ h3 {
 }
 
 .movie-body {
-  background-color: black;
+  background: var(--secondary);
 }
 
 #movie-genre {
@@ -64,33 +63,107 @@ h3 {
 }
 
 hr {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary);
 }
 #poster-img {
   width: inherit;
+}
+
+#poster-img:hover {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s ease-in-out;
 }
 .rating {
   margin-left: 15px;
 }
 
+.btn-primary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--black);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--thirdary);
+  border: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: var(--white);
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:focus {
+  color: var(--white);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-secondary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--black);
+  border: none;
+  margin-bottom: 15px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--thirdary);
+  border: none;
+}
+
+.all-details {
+  /* padding: 20px; */
+}
+
+.top-details {
+  background-color: var(--thirdary);
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.bottom-section-details {
+  /* background-color: var(--primary); */
+  border: 2px solid var(--thirdary);
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+div#film-details {
+  margin-bottom: -1rem;
+}
+
 /* submit button */
 #submit-btn {
   margin-bottom: 5px;
-  width: 150px;
-  height: 40px;
+  width: 10vw;
+  height: 60px;
   border-radius: 10px;
   align-items: center;
+  background-color: var(--thirdary);
 }
+
+/* #prev-search-blocks {
+  background-color: var(--primary);
+  color: var(--primary-light);
+} */
 
 /* search bar */
 #user-input {
-  background-color: #a1cdf4b7;
-  width: 500px;
-  height: 40px;
+  /* background-color: #a1cdf4b7; */
+  width: 40vw;
+  height: 60px;
   margin-top: 30px;
   margin-bottom: 15px;
   border-radius: 10px;
-  align-items: center;
+  padding: 20px;
+  background-color: rgb(0, 0, 0, 0);
+  border: 2px solid var(--black);
 }
 /* movie grid style */
 #prev-search-blocks {
@@ -108,8 +181,14 @@ footer {
 
 .footer-distributed {
   width: 100%;
-  background: linear-gradient(to right, #00093c, #2d0b00);
-  color: #fff;
+  /* background: linear-gradient(to right, #00093c, #2d0b00); */
+  background: linear-gradient(
+    to right,
+    var(--primary),
+    var(--secondary),
+    var(--thirdary)
+  );
+  color: var(--black);
 
   border-top-left-radius: 125px;
   font-size: 13px;
@@ -133,10 +212,7 @@ footer {
 
 form {
   padding-bottom: 15px;
-
   align-items: center;
-
-  border-bottom: 1px solid #ccc;
   margin-bottom: 50px;
 }
 
@@ -144,6 +220,7 @@ form .far {
   font-size: 18px;
   margin-right: 10px;
 }
+
 footer .social-icons {
   display: flex;
 }
@@ -155,7 +232,7 @@ footer .social-icons li a {
   line-height: 40px;
   font-size: 20px;
 
-  background: #fff;
+  background: var(--white);
   margin-right: 15px;
   cursor: pointer;
   display: inline-block;
@@ -173,4 +250,8 @@ footer .social-icons a:hover {
 
 .copyright {
   text-align: left;
+}
+
+.display-4 {
+  color: var(--black);
 }

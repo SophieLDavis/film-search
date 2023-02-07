@@ -39,7 +39,7 @@ function movieSearch(userInput) {
     var imdbRating = $("<p class='movie-imdbrating'>").text(
       "Movie imdb Rating: " + result.imdbRating
     );
-
+    console.log(result);
     var imdbRating = result.imdbRating;
 
     var runTime = result.Runtime;
@@ -59,6 +59,7 @@ function movieSearch(userInput) {
     // $("#poster-img").append(poster);
     $("#poster-img").attr("src", result.Poster);
     $("#star-icon").attr("src", "./images/Asset 1.svg");
+    $("#imdb-link").attr("href", `https://www.imdb.com/title/${result.imdbID}`);
     var youtubeQueryURL,
       youtubeSearchQuery = title;
     // Format search query so that spaces are changed to +
@@ -96,7 +97,7 @@ function previousSearches() {
       var previousSearchBlock = $(`<div></div>`);
       previousSearchBlock.css(
         "background-image",
-        "linear-gradient(to top, rgb(17 24 61 / 73%), rgb(66 19 97 / 80%)), url(" +
+        "linear-gradient(to top, rgb(181 203 191 / 40%), rgb(239 196 217 / 80%)), url(" +
           result.Poster +
           ")"
       );

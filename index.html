@@ -19,7 +19,7 @@
     <script src="https://kit.fontawesome.com/81c89a9acd.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <title>Film Soundtrack Search</title>
+    <title>Film Search</title>
     <!-- As a link -->
     <!-- As a heading -->
     <link
@@ -28,14 +28,14 @@
     />
 
     <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand mb-0 h1" id="navtext">Film Soundtrack</span>
+      <span class="navbar-brand mb-0 h1" id="navtext">Film Search</span>
     </nav>
   </head>
   <body>
     <!---jumbotron-->
     <div class="jumbotron jumbotron-fluid">
       <div class="text-center">
-        <h1 class="display-4">Soundtrack search</h1>
+        <h1 class="display-4">Film search</h1>
         <form class="search-input">
           <input type="text" placeholder="&#128269" id="user-input" />
           <button id="submit-btn" class="btn btn-info">Go!</button>
@@ -50,9 +50,11 @@
         </div>
         <div class="col-md-8">
           <div class=" movie-textdata" >
-            <div class="">
-                <h2 class="appendel" id="movie-title"></h2>
+            <div class="all-details">
+                <div class="top-details">
+                    <h2 class="appendel" id="movie-title"></h2>
                 <p class="card-text appendel" id="movie-genre"></p>
+                
                 <div class="d-flex flex-row justify-content-start" id="film-details">
                     <p class="card-text appendel" id="movie-runtime"></p>
                     <div class="rating d-flex flex-row">
@@ -60,17 +62,18 @@
                         <p class="card-text appendel" id="movie-imdbrating"></p>
                     </div>
                   </div>
-                  
+                </div>
                 <!-- <h5 class="card-title appendel">Movie-data</h5> -->
-                <hr />
-                
-                
-                <p class="card-text appendel" id="movie-plot"></p>
-                <p class="card-text appendel" id="movie-director"></p>
-                <button id="imdb-link" class="btn-secondary btn">More info</button>
-                <div >
+                <!-- <hr /> -->  
+                <div class="bottom-section-details">
+                    <p class="card-text appendel" id="movie-plot"></p>
+                <p class="card-text appendel" id="movie-director">Directed by </p>
+                <a id="imdb-link" href="" target="_blank"><button class="btn-secondary btn">More info</button></a>
+                <div>
                     <iframe id="video-embed" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
+                </div>           
+                
             </div>
            </div>
         </div>
