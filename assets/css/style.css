@@ -92,6 +92,14 @@ hr {
   border-radius: 10px;
   align-items: center;
 }
+/* movie grid style */
+#prev-search-blocks {
+  
+  justify-content:center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
 /* Adding style to Footer section */
 footer {
   position: relative;
