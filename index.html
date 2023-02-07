@@ -45,73 +45,37 @@
     </form>
     <!---card for video and text -->
     <div class="row"> 
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Video</h5>
-            <div >
-                <iframe id="video-embed" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-          </div>
+      <div class="card mb-3 col-sm-12 movie-body d-flex flex-row p-5">
+        <div class="col-md-4">
+            <img id="poster-img" height="80vh" class="img-fluid" src="">
         </div>
-      </div>
-      <div class="card mb-3 col-sm-8 movie-body">
-        <div class="row no-gutters">
-
-          <div class="col-md-4 appendel"></div>
-          <div class="col-md-8 movie-textdata" >
-
-          <div class="col-md-4">
-          <img id="poster-img" width="300px" class="img-fluid" src="">
-            </div>
-          <div class="col-md-8">
-
+        <div class="col-md-8">
+          <div class=" movie-textdata" >
+            <div class="">
                 <h2 class="appendel" id="movie-title"></h2>
-                <h5 class="card-title appendel">Movie-data</h5>
+                <p class="card-text appendel" id="movie-genre"></p>
+                <div class="d-flex flex-row justify-content-start" id="film-details">
+                    <p class="card-text appendel" id="movie-runtime"></p>
+                    <div class="rating d-flex flex-row">
+                        <img src="" id="star-icon">
+                        <p class="card-text appendel" id="movie-imdbrating"></p>
+                    </div>
+                  </div>
+                  
+                <!-- <h5 class="card-title appendel">Movie-data</h5> -->
                 <hr />
-                <div class="flex flex-row" id="genre-runtime">
-                  <p class="card-text appendel" id="movie-genre"></p>
-                  <span class="card-text appendel" id="movie-runtime"></span>
-                </div>
-                <p class="card-text appendel" id="movie-imdbrating"></p>
+                
+                
                 <p class="card-text appendel" id="movie-plot"></p>
                 <p class="card-text appendel" id="movie-director"></p>
-  <!--           <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <button id="imdb-link" class="btn-secondary btn">More info</button>
+                <div >
+                    <iframe id="video-embed" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-8 flex flex-col">
-        <div class="card" id="movie-data">
-          <div class="card-body">
-            <h2 class="appendel" id="movie-title"></h2>
-            <h5 class="card-title appendel">Movie-data</h5>
-            <hr />
-            <div class="flex flex-row" id="genre-runtime">
-              <p class="card-text appendel" id="movie-genre"></p>
-              <span class="card-text appendel" id="movie-runtime"></span>
-            </div>
-            <p class="card-text appendel" id="movie-imdbrating"></p>
-            <p class="card-text appendel" id="movie-plot"></p>
-            <p class="card-text appendel" id="movie-director"></p> -->
-          </div>
+           </div>
         </div>
     </div>
-    </div>
-    <!---embed video container-->
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col">
-          <div style="text-align: center">
-            <video width="500" height="400" controls></video>
-          </div>
-        </div>
-        <div class="col" id="poster"></div>
-      </div>
-    </div> -->
     <container id="prev-search-blocks" class="d-flex flex-row"></container>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script

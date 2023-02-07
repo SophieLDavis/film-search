@@ -1,58 +1,74 @@
 /* setting colour variable  */
 :root {
-    --primary-color:#B5B1B2;
-    --secondary-color: #ADA9B7;
-    --font-color: #A1CDF4;
-    --bg-color: #A9AFD1;
-    --heading-color:#A1CDF4;
-  }
-  body {
-    background-color: var(--bg-color);
-    color: var(--font-color);
-  }
+  --primary-color: #b5b1b2;
+  --secondary-color: #ada9b7;
+  --font-color: #a1cdf4;
+  --bg-color: #a9afd1;
+  --heading-color: #a1cdf4;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
 
+h1,
+h2,
+h3 {
+  font-family: "Bungee", cursive;
+}
 /*  setting text colour (needs refactoring) */
 .display-4 {
-font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
 }
 .lead {
-font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
 }
 #navtext {
-font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
 }
 
 /* Adding background image to jumbotron */
 .jumbotron {
-    background: url('https://images.unsplash.com/photo-1614849286447-fb815456e5a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
- }
+  background: url("https://images.unsplash.com/photo-1614849286447-fb815456e5a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
 
 .poster {
   border: 5px;
 }
 
 .search-input {
-    text-align: center;
+  text-align: center;
 }
 
 .movie-body {
-
   background-color: black;
-  
+}
+
+#movie-genre {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: smaller;
+  margin-bottom: 0px;
+}
+
+#star-icon {
+  max-width: 16px;
+  margin-right: 5px;
+  margin-top: -15px;
+}
+
+hr {
+  border: 1px solid var(--primary-color);
 }
 #poster-img {
-  height: 10px;
-  width: 40px;
-  
+  width: inherit;
 }
-
-.movie-textdata {
-  margin: 40px;
-  /* padding-right: 15px !important; */
+.rating {
+  margin-left: 15px;
 }
-
-

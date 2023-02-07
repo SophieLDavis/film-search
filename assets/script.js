@@ -1,5 +1,5 @@
 // Using OMDB api to fetch movie data
-let movieSearches = [];
+let movieSearches = ["Harry Potter"];
 $("#submit-btn").on("click", function (e) {
   e.preventDefault();
 
@@ -51,13 +51,14 @@ function movieSearch(userInput) {
     //   var movieData = $("<div>");
 
     $("#movie-title").text(title);
-    $("#genre-runtime").text(genre, runTime);
+    $("#movie-runtime").text(`Runtime: ${runTime}`);
+    $("#movie-genre").text(genre);
     $("#movie-imdbrating").text(imdbRating);
     $("#movie-plot").text(plot);
     $("#movie-director").text(director);
     // $("#poster-img").append(poster);
     $("#poster-img").attr("src", result.Poster);
-
+    $("#star-icon").attr("src", "./images/Asset 1.svg");
     var youtubeQueryURL,
       youtubeSearchQuery = title;
     // Format search query so that spaces are changed to +
