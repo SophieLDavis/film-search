@@ -55,7 +55,7 @@ font-family: 'Bungee', cursive;
   /* padding-right: 15px !important; */
 }
 
-
+/* Adding style to Footer section */
 footer {
   position: relative;
   bottom: 0;
@@ -68,15 +68,11 @@ footer {
 
   border-top-left-radius: 125px;
   font-size: 13px;
-  /* line-height: 20px; */
+  
   padding: 50px 50px 60px 50px;
   margin-top: 80px;
   text-align: left;
-  /* padding: 20px 50px; */
-/* 
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;  */
+
 
 }
 .footer-distributed .col-left {
@@ -130,7 +126,7 @@ footer .social-icons li {
   list-style: none;
  
 }
-
+/* Hover effect on social icons */
 footer .social-icons a:hover{
   transform: translateY(-10px);
 
