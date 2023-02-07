@@ -96,7 +96,7 @@ function previousSearches() {
       var previousSearchBlock = $(`<div></div>`);
       previousSearchBlock.css(
         "background-image",
-        "linear-gradient(to top, rgb(17 24 61 / 73%), rgb(66 19 97 / 80%)), url(" +
+        "linear-gradient(to top, rgb(181 203 191 / 40%), rgb(239 196 217 / 80%)), url(" +
           result.Poster +
           ")"
       );

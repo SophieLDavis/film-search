@@ -50,9 +50,11 @@
         </div>
         <div class="col-md-8">
           <div class=" movie-textdata" >
-            <div class="">
-                <h2 class="appendel" id="movie-title"></h2>
+            <div class="all-details">
+                <div class="top-details">
+                    <h2 class="appendel" id="movie-title"></h2>
                 <p class="card-text appendel" id="movie-genre"></p>
+                
                 <div class="d-flex flex-row justify-content-start" id="film-details">
                     <p class="card-text appendel" id="movie-runtime"></p>
                     <div class="rating d-flex flex-row">
@@ -60,17 +62,18 @@
                         <p class="card-text appendel" id="movie-imdbrating"></p>
                     </div>
                   </div>
-                  
+                </div>
                 <!-- <h5 class="card-title appendel">Movie-data</h5> -->
-                <hr />
-                
-                
-                <p class="card-text appendel" id="movie-plot"></p>
-                <p class="card-text appendel" id="movie-director"></p>
+                <!-- <hr /> -->  
+                <div class="bottom-section-details">
+                    <p class="card-text appendel" id="movie-plot"></p>
+                <p class="card-text appendel" id="movie-director">Directed by </p>
                 <button id="imdb-link" class="btn-secondary btn">More info</button>
-                <div >
+                <div>
                     <iframe id="video-embed" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
+                </div>           
+                
             </div>
            </div>
         </div>
