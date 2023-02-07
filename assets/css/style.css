@@ -121,3 +121,14 @@ form .far{
   cursor: pointer;
 
 }
+
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1 px solid #ccc;
+  margin: 20px auto;
+  
+}
+.copyright {
+  text-align: center;
+}
