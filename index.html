@@ -14,6 +14,9 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+
+    <!-- Fontawesome CSS -->
+    <script src="https://kit.fontawesome.com/81c89a9acd.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>Film Soundtrack Search</title>
@@ -33,16 +36,12 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="text-center">
         <h1 class="display-4">Soundtrack search</h1>
-        <button type="button" class="btn btn-primary btn-lg lead">
-          Search top 100 films
-        </button>
+        <form class="search-input">
+          <input type="text" placeholder="&#128269" id="user-input" />
+          <button id="submit-btn" class="btn btn-info">Go!</button>
+        </form>
       </div>
     </div>
-    <!---search button-->
-    <form class="search-input">
-      <input type="text" placeholder="Search.." id="user-input" />
-      <button id="submit-btn"><i class="fa fa-search">search</i></button>
-    </form>
     <!---card for video and text -->
     <div class="row"> 
       <div class="card mb-3 col-sm-12 movie-body d-flex flex-row p-5">
@@ -77,6 +76,61 @@
         </div>
     </div>
     <container id="prev-search-blocks" class="d-flex flex-row"></container>
+    
+
+    <!-- footer section -->
+    <footer class="footer-distributed">
+      <div class="row">
+    
+        <div class="col-left">
+          <p class="footer-company-about">
+            <h3>About the company</h3>
+            <strong>Movie trailer</strong> is a page where you can
+            find trailers for all movies in one single click.
+          </p>
+          <p class="copyright">Copyright © 2023 All rights reserved</p>
+        </div>
+        <div class="col-center">
+          <h3>Office</h3>
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p>203 Fake St.Mountain View</p>
+    
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+ 2 393 3929 210</p>
+    
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="#">info@yourdomain.com</a></p>
+    
+          </div>
+    
+        </div>
+    
+        <div class="col-right">
+          <h3>Newsletter</h3>
+          <form>
+            <i class="far fa-envelope"></i>
+            <input type="email" placeholder="Enter your email id" required>
+            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+          </form>
+          <div class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+    
+    
+    
+          </div>
+        </div>
+      </div>
+      
+      
+    </footer>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
