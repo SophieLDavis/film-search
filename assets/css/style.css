@@ -25,16 +25,6 @@ h3 {
 a {
   color: var(--black);
 }
-/* setting text colour (needs refactoring)
-.display-4 {
-  font-family: "Bungee", cursive;
-}
-.lead {
-  font-family: "Bungee", cursive;
-}
-#navtext {
-  font-family: "Bungee", cursive;
-} */
 
 /* Adding background image to jumbotron */
 .jumbotron {
@@ -77,6 +67,11 @@ hr {
 }
 #poster-img {
   width: inherit;
+}
+
+#poster-img:hover {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s ease-in-out;
 }
 .rating {
   margin-left: 15px;
@@ -129,12 +124,14 @@ hr {
 .top-details {
   background-color: var(--thirdary);
   padding: 20px;
+  border-radius: 10px 10px 0 0;
 }
 
 .bottom-section-details {
   /* background-color: var(--primary); */
   border: 2px solid var(--thirdary);
   padding: 20px;
+  border-radius: 0 0 10px 10px;
 }
 
 div#film-details {
@@ -144,7 +141,7 @@ div#film-details {
 /* submit button */
 #submit-btn {
   margin-bottom: 5px;
-  width: 150px;
+  width: 10vw;
   height: 60px;
   border-radius: 10px;
   align-items: center;
@@ -159,7 +156,7 @@ div#film-details {
 /* search bar */
 #user-input {
   /* background-color: #a1cdf4b7; */
-  width: 500px;
+  width: 40vw;
   height: 60px;
   margin-top: 30px;
   margin-bottom: 15px;
