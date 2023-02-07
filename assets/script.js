@@ -1,8 +1,21 @@
 // Using OMDB api to fetch movie data
-let movieSearches = ["Harry Potter"];
+let movieSearches = [];
+
+$("#loading-submit-btn").on("click", function (e) {
+  e.preventDefault();
+  console.log("click");
+  $(".loading-container").css("display", "none");
+  $(".main-container").css("display", "block");
+  var userInput = $("#loading-user-input").val().trim();
+  movieSearch(userInput);
+  movieSearches.push(userInput);
+  localStorage.setItem("movieSearches", JSON.stringify(movieSearches));
+  previousSearches();
+});
+
 $("#submit-btn").on("click", function (e) {
   e.preventDefault();
-
+  console.log("click");
   var userInput = $("#user-input").val().trim();
   movieSearch(userInput);
   movieSearches.push(userInput);
@@ -11,6 +24,7 @@ $("#submit-btn").on("click", function (e) {
 });
 
 function movieSearch(userInput) {
+  console.log(userInput);
   $(".appendel").empty();
   $("#video-embed").empty();
 
@@ -55,7 +69,7 @@ function movieSearch(userInput) {
     $("#movie-genre").text(genre);
     $("#movie-imdbrating").text(imdbRating);
     $("#movie-plot").text(plot);
-    $("#movie-director").text(director);
+    $("#movie-director").text("Directed by " + director);
     // $("#poster-img").append(poster);
     $("#poster-img").attr("src", result.Poster);
     $("#star-icon").attr("src", "./images/Asset 1.svg");
@@ -64,7 +78,7 @@ function movieSearch(userInput) {
       youtubeSearchQuery = title;
     // Format search query so that spaces are changed to +
     var youtubeSearchQuery2 = youtubeSearchQuery.replace(/ /g, "+");
-    var sophieApiKey = "AIzaSyBs6xu_mSbjlI-Afa9do9-6RHln-FL-2vI";
+    var sophieApiKey = "AIzaSyBDNDcUNuJasGDmt0ImEc67rEzRz4YIClY";
     youtubeQueryURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=${sophieApiKey}&q=${youtubeSearchQuery2}+trailer`;
     // youtubeQueryURL;
     $.ajax({

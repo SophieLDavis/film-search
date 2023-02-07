@@ -26,13 +26,24 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Bungee"
     />
-
-    <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand mb-0 h1" id="navtext">Film Search</span>
-    </nav>
   </head>
   <body>
+    <div class="loading-container" >
+        <div class="text-center">
+            <h1 class="display-4">Film search</h1>
+            <form class="search-input">
+              <input type="text" placeholder="&#128269" id="loading-user-input" />
+              <button id="loading-submit-btn" class="btn btn-info">Go!</button>
+            </form>
+            <div class="credits">
+                <p>By Yogita, Sarah, Sophie & Seamus</p>
+            </div>
+          </div>
+          
+        </div>
+        
     <!---jumbotron-->
+    <div class="main-container">
     <div class="jumbotron jumbotron-fluid">
       <div class="text-center">
         <h1 class="display-4">Film search</h1>
@@ -69,8 +80,8 @@
                     <p class="card-text appendel" id="movie-plot"></p>
                 <p class="card-text appendel" id="movie-director">Directed by </p>
                 <a id="imdb-link" href="" target="_blank"><button class="btn-secondary btn">More info</button></a>
-                <div>
-                    <iframe id="video-embed" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="iframe-container">
+                    <iframe id="video-embed" class="responsive-iframe"  src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 </div>           
                 
@@ -86,7 +97,7 @@
     <footer class="footer-distributed">
       <div class="row">
     
-        <div class="col-left">
+        <div class="col-12 col-sm-4">
           <p class="footer-company-about">
             <h3>About the company</h3>
             <strong>Movie trailer</strong> is a page where you can
@@ -94,7 +105,7 @@
           </p>
           <p class="copyright">Copyright © 2023 All rights reserved</p>
         </div>
-        <div class="col-center">
+        <div class="col-12 col-sm-4">
           <h3>Office</h3>
           <div>
             <i class="fa fa-map-marker"></i>
@@ -114,7 +125,7 @@
     
         </div>
     
-        <div class="col-right">
+        <div class="col-12 col-sm-4">
           <h3>Newsletter</h3>
           <form>
             <i class="far fa-envelope"></i>
@@ -133,7 +144,8 @@
         </div>
       </div>
       
-      
+    </div>
+    </div>
     </footer>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script
