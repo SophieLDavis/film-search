@@ -55,33 +55,21 @@ font-family: 'Bungee', cursive;
   /* padding-right: 15px !important; */
 }
 
-/* /* footer {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  width: 100%;
-  background-color: darkblue;
-} */
-/* footer section styling */
-
-/* .footer-section {
-  background-color: aquamarine;
-} */ 
-
-/* footer section styling */
 
 footer {
   width: 100%;
   background: linear-gradient(to right,#00093c, #2d0b00);
   color: #fff;
-  padding: 100px 0 30px;
+
   border-top-left-radius: 125px;
   font-size: 13px;
   line-height: 20px;
-  
-  bottom: 0;
+  padding: 20px 50px;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+
 }
 
 ul li {
@@ -107,21 +95,37 @@ form .far{
   font-size: 18px;
   margin-right: 10px;
 }
-
-.social-icons .fab{
+footer .social-icons {
+  display: flex;
+}
+footer .social-icons li a{
   width: 40px;
   height: 40px;
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
   font-size: 20px;
-  color: #000;
+  
   background: #fff;
   margin-right: 15px;
   cursor: pointer;
+  display: inline-block;
+ 
+  flex-wrap: wrap; 
+  transition: 0.5s;
+ 
 
+} 
+footer .social-icons li {
+  list-style: none;
+ 
 }
 
+footer .social-icons a:hover{
+  transform: translateY(-10px);
+
+
+}
 hr {
   width: 90%;
   border: 0;
