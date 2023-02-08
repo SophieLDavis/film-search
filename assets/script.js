@@ -22,22 +22,20 @@ $("#submit-btn").on("click", function (e) {
   localStorage.setItem("movieSearches", JSON.stringify(movieSearches));
   previousSearches();
 });
- //user input
+//user input
 function movieSearch(userInput) {
   //empty the classes to stop duplicate searches
   $(".appendel").empty();
   $("#video-embed").empty();
- 
-   //OMBD api to fetch film information
+
+  //OMBD api to fetch film information
   var movieTitle = userInput;
   var queryURL = "https://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieTitle;
- 
-  
+
   $.ajax({
     url: queryURL,
     method: "GET",
   }).then(function (result) {
-   
     //variables for film information
     var title = result.Title;
 
@@ -47,7 +45,7 @@ function movieSearch(userInput) {
     var imdbRating = $("<p class='movie-imdbrating'>").text(
       "Movie imdb Rating: " + result.imdbRating
     );
-  
+
     var imdbRating = result.imdbRating;
 
     var runTime = result.Runtime;
@@ -83,10 +81,9 @@ function movieSearch(userInput) {
       url: youtubeQueryURL,
       method: "GET",
     }).then(function (result) {
-
-     //variable created to embed trailer to webpage
+      //variable created to embed trailer to webpage
       var fullTrailerURL = `https://www.youtube.com/embed/${result.items[0].id.videoId}`;
-    
+
       $("#video-embed").attr("src", fullTrailerURL);
     });
   });
@@ -94,14 +91,12 @@ function movieSearch(userInput) {
 
 // Return previous searches
 function previousSearches() {
-
   //Saving previous search to local storage
   var movieSearches = JSON.parse(localStorage.getItem("movieSearches"));
 
   //empty previous search blocks to avoid creating duplicate searches
   $("#prev-search-blocks").empty();
   for (var i = 0; i < movieSearches.length; i++) {
-
     //variable created to fetch OMBD api information for previous searches
     var queryURL =
       "https://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieSearches[i];
@@ -109,15 +104,16 @@ function previousSearches() {
       url: queryURL,
       method: "GET",
     }).then(function (result) {
-     
       //film information and poster
-      var previousSearchBlock = $(`<div></div>`);
+      var previousSearchBlock = $(`<div class="previous-box"></div>`);
+
       previousSearchBlock.css(
         "background-image",
         "linear-gradient(to top, rgb(181 203 191 / 40%), rgb(239 196 217 / 80%)), url(" +
-          result.Poster + ")"
+          result.Poster +
+          ")"
       );
-      previousSearchBlock.css("width", "30vw");
+      //   previousSearchBlock.css("width", "30vw");
       previousSearchBlock.css("padding", "2rem");
       previousSearchBlock.css("margin", "1rem");
       previousSearchBlock.css("background-repeat", "no-repeat");
