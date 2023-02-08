@@ -273,6 +273,22 @@ footer .social-icons a:hover {
   transform: translateY(-10px);
 }
 
+.input-styler input {
+  border-radius: 10px;
+  padding: 1rem;
+  height: 2rem;
+  background-color: rgb(0, 0, 0, 0);
+  border: 2px solid var(--black);
+}
+
+.input-styler button {
+  /* width: 10vw; */
+  padding: 6px;
+  border-radius: 10px;
+  align-items: center;
+  background-color: var(--thirdary);
+}
+
 .copyright {
   text-align: left;
 }
@@ -376,8 +392,31 @@ footer .social-icons a:hover {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... } */
 
+.previous-box {
+  width: 30vw;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 840px) {
   .loading-container h1 {
     font-size: 7rem;
+  }
+
+  .bottom-section-details {
+    border-radius: 0px;
+  }
+
+  .previous-box {
+    width: 80vw;
+  }
+
+  .footer-distributed {
+    width: 100%;
+    /* padding: 50px 50px 60px 50px; */
+    margin-top: 80px;
+  }
+
+  .footer-company-about {
+    max-width: 50%;
   }
 }

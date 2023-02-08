@@ -79,6 +79,7 @@ function movieSearch(userInput) {
     // Format search query so that spaces are changed to +
     var youtubeSearchQuery2 = youtubeSearchQuery.replace(/ /g, "+");
     var sophieApiKey = "AIzaSyBDNDcUNuJasGDmt0ImEc67rEzRz4YIClY";
+    var seamusApiKey = "";
     youtubeQueryURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=${sophieApiKey}&q=${youtubeSearchQuery2}+trailer`;
     // youtubeQueryURL;
     $.ajax({
@@ -108,14 +109,14 @@ function previousSearches() {
     }).then(function (result) {
       //   (result);
       //title, director,poster,imdbRating,Runtime,Plot,Genre
-      var previousSearchBlock = $(`<div></div>`);
+      var previousSearchBlock = $(`<div class="previous-box"></div>`);
       previousSearchBlock.css(
         "background-image",
         "linear-gradient(to top, rgb(181 203 191 / 40%), rgb(239 196 217 / 80%)), url(" +
           result.Poster +
           ")"
       );
-      previousSearchBlock.css("width", "30vw");
+      //   previousSearchBlock.css("width", "30vw");
       previousSearchBlock.css("padding", "2rem");
       previousSearchBlock.css("margin", "1rem");
       previousSearchBlock.css("background-repeat", "no-repeat");

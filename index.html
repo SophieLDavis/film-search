@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow-x: hidden;">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -27,11 +27,11 @@
       href="https://fonts.googleapis.com/css2?family=Bungee"
     />
   </head>
-  <body>
+  <body style="overflow-x: hidden;">
     <div class="loading-container" >
         <div class="text-center">
             <h1 class="display-4">Film search</h1>
-            <form class="search-input">
+            <form class="search-input input-styler">
               <input type="text" placeholder="&#128269" id="loading-user-input" />
               <button id="loading-submit-btn" class="btn btn-info">Go!</button>
             </form>
@@ -55,11 +55,11 @@
     </div>
     <!---card for video and text -->
     <div class="row"> 
-      <div class="card info-card mb-3 col-sm-12 movie-body d-flex flex-md-row flex-sm-col p-5">
-        <div class="col-md-4 col-sm-12">
+      <div class="card row info-card mb-3 col-sm-12 movie-body d-flex flex-row ml-0 p-5">
+        <div class="col-md-4 col-sm-12 ">
             <img id="poster-img" width="100%" class="img-fluid" src="">
         </div>
-        <div class="col-md-8 col-sm-12">
+        <div class="col-md-8 col-sm-12 order-first order-sm-last">
           <div class=" movie-textdata" >
             <div class="all-details">
                 <div class="top-details">
@@ -74,8 +74,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- <h5 class="card-title appendel">Movie-data</h5> -->
-                <!-- <hr /> -->  
+              
                 <div class="bottom-section-details">
                     <p class="card-text appendel" id="movie-plot"></p>
                 <p class="card-text appendel" id="movie-director">Directed by </p>
@@ -98,10 +97,10 @@
       <div class="row">
     
         <div class="col-12 col-sm-4">
-          <p class="footer-company-about">
+          
             <h3>About the company</h3>
-            <strong>Movie trailer</strong> is a page where you can
-            find trailers for all movies in one single click.
+            <p class="footer-company-about"> <strong>Film trailer search</strong> is a page where you can
+            find trailers for all films in a single click.
           </p>
           <p class="copyright">Copyright © 2023 All rights reserved</p>
         </div>
@@ -127,7 +126,7 @@
     
         <div class="col-12 col-sm-4">
           <h3>Newsletter</h3>
-          <form class="footer-form">
+          <form class="footer-form input-styler">
             <i class="far fa-envelope"></i>
             <input type="email" placeholder="Enter your email id" required>
             <button type="submit"><i class="fas fa-arrow-right"></i></button>
