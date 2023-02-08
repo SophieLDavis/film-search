@@ -20,14 +20,13 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>Film Search</title>
-    <!-- As a link -->
-    <!-- As a heading -->
+
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Bungee"
-    />
+      href="https://fonts.googleapis.com/css2?family=Bungee"/>
   </head>
   <body>
+    <!---container for first search screen-->
     <div class="loading-container" >
         <div class="text-center">
             <h1 class="display-4">Film search</h1>
@@ -54,11 +53,13 @@
       </div>
     </div>
     <!---card for video and text -->
+    <!---poster-->
     <div class="row"> 
       <div class="card mb-3 col-sm-12 movie-body d-flex flex-row p-5">
         <div class="col-md-4">
             <img id="poster-img" height="80vh" class="img-fluid" src="">
         </div>
+        <!---film information-->
         <div class="col-md-8">
           <div class=" movie-textdata" >
             <div class="all-details">
@@ -74,8 +75,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- <h5 class="card-title appendel">Movie-data</h5> -->
-                <!-- <hr /> -->  
+                <!---video-->
                 <div class="bottom-section-details">
                     <p class="card-text appendel" id="movie-plot"></p>
                 <p class="card-text appendel" id="movie-director">Directed by </p>
@@ -89,7 +89,7 @@
            </div>
         </div>
     </div>
-    <!-- <container id="prev-search-blocks" class="d-flex flex-row"></container> -->
+    <!--container for previous searches-->
     <container id="prev-search-blocks" class="row col-sm"></container>
     
 
@@ -122,9 +122,7 @@
             <p><a href="#">info@yourdomain.com</a></p>
     
           </div>
-    
         </div>
-    
         <div class="col-12 col-sm-4">
           <h3>Newsletter</h3>
           <form>
@@ -137,9 +135,6 @@
             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-    
-    
-    
           </div>
         </div>
       </div>
@@ -147,6 +142,7 @@
     </div>
     </div>
     </footer>
+    <!---JQuery and JavaScript-->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
