@@ -28,13 +28,35 @@ a {
 
 /* Adding background image to jumbotron */
 .jumbotron {
-  background: url("https://images.unsplash.com/photo-1614849286447-fb815456e5a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")
+  /* background: url("https://images.unsplash.com/photo-1614849286447-fb815456e5a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; */
   margin-bottom: 0px;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  background: linear-gradient(
+    110deg,
+    var(--primary),
+    var(--secondary),
+    var(--thirdary),
+    var(--secondary)
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .card {
@@ -213,13 +235,13 @@ footer {
   width: 30%;
 } */
 
-form {
+.footer-form {
   padding-bottom: 15px;
   align-items: center;
   margin-bottom: 50px;
 }
 
-form .far {
+.footer-form .far {
   font-size: 18px;
   margin-right: 10px;
 }
@@ -337,4 +359,25 @@ footer .social-icons a:hover {
 
 .loading-container h1 {
   font-size: 10rem;
+}
+
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
+
+@media only screen and (max-width: 840px) {
+  .loading-container h1 {
+    font-size: 7rem;
+  }
 }
