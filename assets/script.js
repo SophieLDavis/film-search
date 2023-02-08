@@ -72,9 +72,12 @@ function movieSearch(userInput) {
     // Format search query so that spaces are changed to +
     var youtubeSearchQuery2 = youtubeSearchQuery.replace(/ /g, "+");
 
-    //Youtube api used to fetch trailer of chosen film
-    var sophieApiKey = "AIzaSyBDNDcUNuJasGDmt0ImEc67rEzRz4YIClY";
-    youtubeQueryURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=${sophieApiKey}&q=${youtubeSearchQuery2}+trailer`;
+    //Youtube api used to fetch trailer of chosen film & teams Api keys.
+    var sarahApiKey = "AIzaSyBDNDcUNuJasGDmt0ImEc67rEzRz4YIClY"; //do not use this one tomorrow for demonstration.
+    var sophieApiKey = "AIzaSyBs6xu_mSbjlI-Afa9do9-6RHln-FL-2vI";
+    var seamusApiKey = "AIzaSyDwgSkDF2C9Urcz4cS9A7r1XYsV5_khoh4&q";
+    var yogitaApiKey = "";
+    youtubeQueryURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=${sarahApiKey}&q=${youtubeSearchQuery2}+trailer`;
    
     $.ajax({
       url: youtubeQueryURL,
