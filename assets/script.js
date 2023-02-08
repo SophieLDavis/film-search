@@ -29,7 +29,7 @@ function movieSearch(userInput) {
   $("#video-embed").empty();
 
   var movieTitle = userInput;
-  var queryURL = "http://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieTitle;
+  var queryURL = "https://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieTitle;
 
   $.ajax({
     url: queryURL,
@@ -101,7 +101,7 @@ function previousSearches() {
   $("#prev-search-blocks").empty();
   for (var i = 0; i < movieSearches.length; i++) {
     var queryURL =
-      "http://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieSearches[i];
+      "https://www.omdbapi.com/?apikey=trilogy" + "&t=" + movieSearches[i];
     $.ajax({
       url: queryURL,
       method: "GET",

@@ -34,6 +34,7 @@ a {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  margin-bottom: 0px;
 }
 
 .card {
