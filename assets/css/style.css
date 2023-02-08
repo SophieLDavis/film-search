@@ -374,7 +374,7 @@ footer .social-icons a:hover {
 
 @media only screen and (max-width: 840px) {
   .loading-container h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .bottom-section-details {
@@ -382,7 +382,7 @@ footer .social-icons a:hover {
   }
 
   .previous-box {
-    width: 80vw;
+    width: 100%;
   }
 
   .footer-distributed {
@@ -394,4 +394,20 @@ footer .social-icons a:hover {
   .footer-company-about {
     max-width: 50%;
   }
+
+  #loading-user-input,
+  #user-input {
+    width: 70%;
+  }
+
+  #loading-submit-btn,
+  #submit-btn {
+    width: 20%;
+  }
 }
+
+/* @media only screen and (max-width: 450px) {
+  .film-info {
+    width: 95%;
+  }
+} */
