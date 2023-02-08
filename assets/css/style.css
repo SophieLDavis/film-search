@@ -58,7 +58,7 @@ a {
     background-position: 0% 50%;
   }
 }
-
+ /* main container with film info, poster and trailer*/
 .card {
   border: none;
 }
@@ -144,10 +144,6 @@ hr {
   border: none;
 }
 
-.all-details {
-  /* padding: 20px; */
-}
-
 .top-details {
   background-color: var(--thirdary);
   padding: 20px;
@@ -155,7 +151,6 @@ hr {
 }
 
 .bottom-section-details {
-  /* background-color: var(--primary); */
   border: 2px solid var(--thirdary);
   padding: 20px;
   border-radius: 0 0 10px 10px;
@@ -175,14 +170,8 @@ div#film-details {
   background-color: var(--thirdary);
 }
 
-/* #prev-search-blocks {
-  background-color: var(--primary);
-  color: var(--primary-light);
-} */
-
 /* search bar */
 #user-input {
-  /* background-color: #a1cdf4b7; */
   width: 40vw;
   height: 60px;
   margin-top: 30px;
@@ -192,7 +181,7 @@ div#film-details {
   background-color: rgb(0, 0, 0, 0);
   border: 2px solid var(--black);
 }
-/* movie grid style */
+/* movie grid style for previous search */
 #prev-search-blocks {
   justify-content: center;
   margin-left: auto;
@@ -206,7 +195,6 @@ footer {
 
 .footer-distributed {
   width: 100%;
-  /* background: linear-gradient(to right, #00093c, #2d0b00); */
   background: linear-gradient(
     to right,
     var(--primary),
@@ -222,18 +210,6 @@ footer {
   margin-top: 80px;
   text-align: left;
 }
-/* .footer-distributed .col-left {
-  width: 30%;
-  text-align: left;
-}
-
-.footer-distributed .col-center {
-  width: 35%;
-  text-align: center;
-}
-.footer-distributed .col-right {
-  width: 30%;
-} */
 
 .footer-form {
   padding-bottom: 15px;
@@ -297,7 +273,7 @@ footer .social-icons a:hover {
   color: var(--black);
 }
 
-/* iframe */
+/* CSS for iframe container */
 
 .iframe-container {
   position: relative;
@@ -306,7 +282,7 @@ footer .social-icons a:hover {
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
-/* Then style the iframe to fit in the container div with full height and width */
+/* Make iframe responsive */
 .responsive-iframe {
   position: absolute;
   top: 0;
@@ -317,7 +293,7 @@ footer .social-icons a:hover {
   height: 100%;
 }
 
-/* First load view */
+/* CSS for first search screen*/
 .loading-container {
   height: 100vh;
   width: 100vw;
@@ -331,7 +307,7 @@ footer .social-icons a:hover {
     var(--thirdary),
     var(--secondary)
   );
-  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+ 
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
@@ -347,12 +323,12 @@ footer .social-icons a:hover {
   }
 }
 
+
 .main-container {
   display: none;
 }
 
 #loading-user-input {
-  /* background-color: #a1cdf4b7; */
   width: 40vw;
   height: 60px;
   margin-top: 30px;
