@@ -75,8 +75,8 @@ function movieSearch(userInput) {
     var sophieApiKey = "AIzaSyBs6xu_mSbjlI-Afa9do9-6RHln-FL-2vI";
     var seamusApiKey = "AIzaSyDwgSkDF2C9Urcz4cS9A7r1XYsV5_khoh4&q";
     var yogitaApiKey = "";
-    youtubeQueryURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=${sarahApiKey}&q=${youtubeSearchQuery2}+trailer`;
-   
+    youtubeQueryURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=${seamusApiKey}&q=${youtubeSearchQuery2}+trailer`;
+
     $.ajax({
       url: youtubeQueryURL,
       method: "GET",
